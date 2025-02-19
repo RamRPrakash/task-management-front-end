@@ -1,0 +1,33 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+body {
+  @apply bg-gray-100 text-gray-900;
+}
+
+button {
+  @apply px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-all;
+}
+
+input {
+  @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border-width: 4px;
+  border-style: solid;
+  border-color: #3b82f6 transparent transparent transparent;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 1s linear infinite;
+}
